@@ -52,6 +52,11 @@
             </div>
 
 
+            <div class="input-group mt-5">
+                <input v-model="newTask" type="text" class="form-control" placeholder="Aggiunge una nuova task" aria-label="Aggiunge una nuova task" aria-describedby="add-task">
+                <button @click="addTask()" class="btn btn-outline-secondary" type="button" id="add-task">Aggiungi</button>
+              </div>
+
         </div>
 
 

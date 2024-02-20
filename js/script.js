@@ -10,6 +10,8 @@ createApp({
     data() {
         return {
             
+            newTask: '',
+
             tasks: [
                 {
                   text: "Comprare latte",
@@ -52,6 +54,18 @@ createApp({
 
         deleteTask(taskIndex) {
             this.tasks.splice(taskIndex, 1);
+        },
+
+        addTask() {
+
+            const newTask = {
+                text: this.newTask,
+                done: false,
+            }
+
+            this.tasks.push(newTask)
+
+            this.newTask = '';
         }
 
 
